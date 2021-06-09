@@ -1,0 +1,14 @@
+[Unit]
+Description=Service for Bluetooth remote control
+After=getty.target
+
+[Service]
+ExecStart=sh launcher.sh
+WorkingDirectory=/home/pi/scripts
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
